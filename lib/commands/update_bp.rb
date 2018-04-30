@@ -3,7 +3,7 @@ module Commands
   module UpdateBp
     extend Discordrb::Commands::CommandContainer
     command(
-      :updatebp
+      :updatebpasd
     ) do |event, bp|
       if bp.nil?
         message = "Make sure you use format `!updatebp [BP]`"

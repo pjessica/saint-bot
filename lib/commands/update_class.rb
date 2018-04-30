@@ -3,7 +3,7 @@ module Commands
   module UpdateClass
     extend Discordrb::Commands::CommandContainer
     command(
-      :updateclass
+      :updateclassasd
     ) do |event, user_class|
       if user_class.nil?
         message = "Make sure you use format `!updateclass [class]`"

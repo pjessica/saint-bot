@@ -3,7 +3,7 @@ module Commands
   module AddMember
     extend Discordrb::Commands::CommandContainer
     command(
-      :addmember
+      :addmemberasd
     ) do |event, user_class, bp|
       if user_class.nil? || bp.nil?
         message = "Make sure you use format `!addmember [class] [bp]`"

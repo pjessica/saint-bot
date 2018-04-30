@@ -2,7 +2,6 @@ require 'date'
 require 'dotenv'
 require 'discordrb'
 require 'discordrb/data'
-require 'mysql2'
 require 'rubygems'
 require 'rufus-scheduler'
 require 'time'
@@ -16,8 +15,8 @@ Dotenv.load
 # Load bot
 BOT = Discordrb::Commands::CommandBot.new token: ENV['TOKEN'], client_id: ENV['CLIENT_ID'], prefix: '!'
 
-# Load Database
-$db = Mysql2::Client.new( :host => ENV["MYSQL_HOST"], :username => ENV["MYSQL_USER"], :password => ENV["MYSQL_PASSWORD"], :port => ENV["MYSQL_PORT"], :database => ENV["MYSQL_DATABASE"], :reconnect => true)
+# # Load Database
+# $db = Mysql2::Client.new( :host => ENV["MYSQL_HOST"], :username => ENV["MYSQL_USER"], :password => ENV["MYSQL_PASSWORD"], :port => ENV["MYSQL_PORT"], :database => ENV["MYSQL_DATABASE"], :reconnect => true)
 
 # Load scheduler
 SCHEDULER = Rufus::Scheduler.new

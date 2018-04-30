@@ -20,11 +20,11 @@ module Commands
       #   end
       # end
 
-      members = $db.query("SELECT * from members "+sortQuery)
-      members.each do |row|
-        server_user = BOT.member(event.server.id, row["sid"])
-        datas += "#{server_user.name} / #{row["class"]} / #{row["BP"]} (last updated: #{row["updated_at"].strftime('%d/%m/%y | %H:%M:%S')})\n"
-      end
+      # members = $db.query("SELECT * from members "+sortQuery)
+      # members.each do |row|
+      #   server_user = BOT.member(event.server.id, row["sid"])
+      #   datas += "#{server_user.name} / #{row["class"]} / #{row["BP"]} (last updated: #{row["updated_at"].strftime('%d/%m/%y | %H:%M:%S')})\n"
+      # end
       datas
     end
   end
