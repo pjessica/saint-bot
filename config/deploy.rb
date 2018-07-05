@@ -2,7 +2,6 @@
 lock "~> 3.11.0"
 
 set :application, "saint_bot"
-set :scm, :git
 set :repo_url, "git@github.com:pjessica/saint-bot.git"
 
 # Default branch is :master
