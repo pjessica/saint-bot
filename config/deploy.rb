@@ -8,7 +8,7 @@ set :repo_url, "git@github.com:pjessica/saint-bot.git"
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
 
 # Default deploy_to directory is /var/www/my_app_name
-set :deploy_to, "/home/deploy/saint_bot"
+set :deploy_to, "/home/deploy/saint_bot/deploy/"
 
 set :user, "deploy"
 
@@ -39,3 +39,12 @@ set :user, "deploy"
 
 # Uncomment the following to require manually verifying the host key before first deploy.
 # set :ssh_options, verify_host_key: :secure
+namespace :deploy do
+  task :restart do
+    on roles(:app) do
+      execute 'ruby main.rb'
+    end
+  end
+
+  after 'deploy:publishing', 'deploy:restart'
+end
