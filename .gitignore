@@ -3,6 +3,7 @@
 /.config
 /tmp/
 .env
+google-config.json
 
 ## Environment normalization:
 /.bundle/

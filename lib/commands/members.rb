@@ -5,7 +5,7 @@ module Commands
     command(
       :members
     ) do |event, sort_class, sort_bp|
-      session = GoogleDrive::Session.from_service_account_key("Saint-eabc6edcec0e.json")
+      session = GoogleDrive::Session.from_service_account_key("google-config.json")
       ws = session.spreadsheet_by_key(ENV['GSHEET_KEY']).worksheets[0]
 
       datas = ""
